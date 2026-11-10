@@ -226,9 +226,9 @@ h1 .am{color:var(--gold);font-weight:300;margin-right:.08em}
 .hs::before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid var(--gold);animation:pulse 2.4s ease-out infinite}
 .rb .ghost-cap{position:absolute;left:18px;top:16px;z-index:3;color:var(--dim)}
 .rl{list-style:none;display:flex;flex-direction:column}
-.rl li{display:grid;grid-template-columns:44px 1fr;gap:6px 14px;padding:22px 0;border-top:1px solid var(--line)}
+.rl li{display:grid;grid-template-columns:44px 1fr 92px;align-items:center;gap:6px 14px;padding:22px 0;border-top:1px solid var(--line)}
 .rl li:last-child{border-bottom:1px solid var(--line)}
-.rl .no{grid-row:span 2;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--mono);font-size:12px}
+.rl .ph{grid-row:span 2;grid-column:3;width:92px;height:60px;object-fit:contain;opacity:.92}.rl .no{grid-row:span 2;width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--mono);font-size:12px}
 .rl h4{font-family:var(--head);font-weight:600;font-size:clamp(15px,1.5vw,20px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.2}
 .rl h4 b{color:var(--gold);font-weight:800}
 .rl p{color:var(--dim);font-size:14px;line-height:1.5}
@@ -256,7 +256,7 @@ footer img{height:22px;width:auto;opacity:.9}
   .hero{grid-template-columns:1fr}.hero-r{order:-1;height:78svh}.hero-l{padding:46px 6vw 44px}
   .hero-r img{object-position:50% 70%}
   nav ul li:not(:last-child){display:none}
-  .duo-top,.mus,.legs,.rdw,.hp-out,.sets{grid-template-columns:1fr}.yt-scroll{max-height:340px}.two{grid-template-columns:1fr 1fr;gap:8px}.two a{aspect-ratio:3/4;min-height:0}.two a img{height:auto;width:96%}.two .nm{font-size:clamp(26px,8vw,40px)}
+  .duo-top,.mus,.legs,.rdw,.hp-out,.sets{grid-template-columns:1fr}.rl li{grid-template-columns:44px 1fr 70px}.rl .ph{width:70px}.yt-scroll{max-height:340px}.two{grid-template-columns:1fr 1fr;gap:8px}.two a{aspect-ratio:3/4;min-height:0}.two a img{height:auto;width:96%}.two .nm{font-size:clamp(26px,8vw,40px)}
   .disc{width:150px}.mus{justify-items:start}
   .ev{width:68vw}.arrows{display:none}
   .rn text{font-size:22px}.rn-d{r:8px}
@@ -396,10 +396,10 @@ footer img{height:22px;width:auto;opacity:.9}
       <span class="hs" style="left:19%;top:61%">1</span><span class="hs" style="left:57%;top:63%">2</span><span class="hs" style="left:90%;top:60%">1</span></div>
     <div>
       <ul class="rl">
-        <li><span class="no">1</span><h4><b>3×</b> CDJ Pioneer / Alpha</h4><p>3000 o 3000X.</p></li>
-        <li><span class="no">2</span><h4><b>1×</b> Mixer Pioneer / Alpha</h4><p>DJM-V10, DJM-A9 o DJM-NXS2.</p></li>
-        <li><span class="no">3</span><h4><b>1–2×</b> RMX-1000</h4><p>Procesador de efectos Pioneer.</p></li>
-        <li><span class="no">4</span><h4>Retorno y sistema</h4><p>Retorno (booth). Sistema activo, uno por lado + sub: 2 cajas y 2 sub.</p></li>
+        <li><span class="no">1</span><h4><b>3×</b> CDJ Pioneer / Alpha</h4><p>3000 o 3000X.</p><img class="ph" src="assets/rider_cdj.png" alt="" loading="lazy"></li>
+        <li><span class="no">2</span><h4><b>1×</b> Mixer Pioneer / Alpha</h4><p>DJM-V10, DJM-A9 o DJM-NXS2.</p><img class="ph" src="assets/rider_mixer.png" alt="" loading="lazy"></li>
+        <li><span class="no">3</span><h4><b>1–2×</b> RMX-1000</h4><p>Procesador de efectos Pioneer.</p><img class="ph" src="assets/rider_rmx.png" alt="" loading="lazy"></li>
+        <li><span class="no">4</span><h4>Retorno y sistema</h4><p>2 monitores de retorno (booth), uno a cada lado. Sistema activo, uno por lado + sub: 2 cajas y 2 sub.</p><img class="ph" src="assets/rider_monitor.png" alt="" loading="lazy"></li>
       </ul>
       <div class="rd-act"><a class="btn fill" href="GOMEZ_Y_SAINT_RIDER_TECNICO.pdf" target="_blank" rel="noopener">↓ Rider técnico (PDF)</a></div>
     </div>
@@ -410,7 +410,7 @@ footer img{height:22px;width:auto;opacity:.9}
     <form><input type="password" placeholder="CLAVE" autocomplete="off" aria-label="Clave"><button class="btn fill" type="submit">Ver</button></form>
     <div class="err" role="alert"></div>
     <div class="hp-out" hidden></div>
-    <script type="application/json" id="hp-data">{"s":"A13aJ4LNTN58EiWJz52FPA==","i":"7OpN+Sry8ugZugcV","c":"mf5P91YU748KapC1pTAp0nYRPO3E1W4dvvUNvDSoobsPgg4HFhvkMvxUtcJc0YbTPTQUDQKG/4IlJI4Lto6EwS/qLKBEDjWWsX5G2Nn3JrYviPTBunITm6G7UdpDzj99qiqdsun60ZVd7gmB8OlFLZxTtqSJTHUU8dO7w89qCEVVgMq8R1JMXdlCmP4Nv5+N9WDrjGmsdKH83bprpCtHP4aKZ07xSMM/u7Qn9MMtoZUOQ4ZbZlbFFWsg64vQijtXWxiNkEH+gDBRMFkQwkil1j4huJ/latGk95CNTKbXIBMpy4h1t7chCVNCm5q5O8s85tRGNuc3CQF3zeLhO0/zvU+pV+PX8CT6Kro2sV34tgwBkYXIV6LtPb5PMBdVLreNxsZcHLCCelClSPrgjRAo624bXGUsW9pxxJDur/w1fr8a39x53nfjFszRC18FcHZzyHzn07YRaUBqFQB6mtDkFbwAjEXnUFntQY4KTJtRFqaTwuwlBJhofirGSxz60uMbMR9gDSX5ejtf8gchBSvKpGE+zNKvTM/t1VQi4bY/wP12YpYSYf6S0ZaU9rqfpMhS/VwX2boJz974V31Mdk0Gkh4IY2NzR8Wt1Q4muHyKcb1eH8rbjMZA8Pt8CVzOVe3DOabfk7h364Yno7T65irKFX2kQ05aQLXG01y3a4ulfAfkN7lHEaEKRyQNCA/g9WtlXvJpuU5DCGD9ICQ8Jlq8ID++t1ntC5JwK7lE61pebQ=="}</script>
+    <script type="application/json" id="hp-data">{"s":"PHHouJKFCKDWofv9vFqQAw==","i":"JSwiGm+OJ+y7Bi3X","c":"Fu0M/JZCR1TM6+gtW7ryZ7d9hpYTYCCxcbuDkdPHsgMWHLNCXrqTAIUOQCSMDQHpOfGdKkhDrxxqSSNjnks5BAwzT/LuS96TGh5Zx/xn2/XxL6AW4rMYtLGyCXSz+EuXWrcZ4cwncK8OhkPZLCSbdH6NsAscTUOB3DTK2w5vp35J5RqduIF4f3504D3Kii1BMVZ1rZgykzDSiJJAG9PprO4IBy1v9amEPlhaas0mTJqPnWMtzz36buZCFpH74iLBcBzgM1Ws9m0iH4GG8ZWhDFpVDjE1XsRNyc9z+KvLdVmfn9CezBuwUY9O1NBEkqE6SjT1Jz8VYE+zJ4omfM6Rw+uk9goZrvUrYb7azXDqPZ9ZsT/UwM2OuUgwzYCBBh0oQn7oB4AWAkDGw0MM0/HmhxYPfGzgR8TKcuCDEtWdR8O/1SbvBJ8BvEouwGRNRE6Nik52vn/61/1acf1TuzeLp+9OayidQPhFRMfwMdxUIZKVwhQwL627Cn7HdCudB8ytqOfqWkdoQA/MlLZEg8nPF3BmXO43varbboTfqbf2KXpqKmQvDOC4+n2kRa1xb9HAtCk551neSBd9bw2fAENRMNpBzRsMFGxNiC4uyNum3cwAu20DXj0TlNg+TMGB+OLXT5xzgFoifI90BT20VkGn8SngdN88xjNJ17JT2uiHywmwY2+iLPRN/e2mtcINN7FtKIqj5X9r6RJnTOo6xNiJKokE+/ZFnJgvLkw4O9Xb/A=="}</script>
   </div>
 </section>
 
