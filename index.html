@@ -180,6 +180,24 @@ h1 .am{color:var(--gold);font-weight:300;margin-right:.08em}
 .bars i.on{background:var(--gold)}
 .tm{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--dim);min-width:84px;text-align:right}
 .mus .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+/* video sets + soundcloud */
+.sub-h{margin:clamp(44px,6vw,80px) 0 22px;color:var(--gold)}
+.sets{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;align-items:start}
+.yt-lite{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);overflow:hidden}
+.yt-lite>div{position:absolute;inset:0}
+.yt-lite img,.yt-lite iframe{width:100%;height:100%;object-fit:cover;border:0}
+.yt-lite .play{position:absolute;inset:0;border:0;background:linear-gradient(180deg,transparent 40%,rgba(10,9,8,.7));cursor:pointer;display:grid;place-items:center}
+.yt-lite .play i{width:78px;height:78px;border-radius:50%;background:rgba(10,9,8,.5);border:1px solid var(--gold);display:grid;place-items:center;transition:transform .3s,background .3s}
+.yt-lite .play i::after{content:'';border-left:20px solid var(--gold);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+.yt-lite .play:hover i{transform:scale(1.1);background:rgba(202,164,90,.2)}
+.yt-list{position:relative}
+.yt-scroll{display:flex;flex-direction:column;gap:10px;max-height:calc((100vw - 12vw) * .6 * .5625 + 4px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;padding-right:4px}
+.yt-item{display:flex;align-items:center;gap:14px;padding:8px;border:1px solid var(--line);background:none;color:var(--bone);text-align:left;cursor:pointer;flex-shrink:0;transition:border-color .25s,background .25s}
+.yt-item:hover{border-color:var(--gold)}.yt-item.on{border-color:var(--gold);background:rgba(202,164,90,.1)}
+.yt-item img{width:108px;aspect-ratio:16/9;object-fit:cover;flex:none}
+.yt-item strong{display:block;font-family:var(--head);font-weight:500;font-size:12px;text-transform:uppercase;line-height:1.25;margin-bottom:4px}
+.yt-item em{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.sc iframe{width:100%;height:450px;border:1px solid var(--line);display:block;background:var(--card)}
 /* descarga con follow */
 .dl{position:fixed;inset:0;z-index:300;background:rgba(6,5,4,.92);display:none;align-items:center;justify-content:center;padding:20px}
 .dl.open{display:flex}
@@ -238,7 +256,7 @@ footer img{height:22px;width:auto;opacity:.9}
   .hero{grid-template-columns:1fr}.hero-r{order:-1;height:78svh}.hero-l{padding:46px 6vw 44px}
   .hero-r img{object-position:50% 70%}
   nav ul li:not(:last-child){display:none}
-  .duo-top,.mus,.legs,.rdw,.hp-out{grid-template-columns:1fr}.two{grid-template-columns:1fr 1fr;gap:8px}.two a{aspect-ratio:3/4;min-height:0}.two .nm{font-size:clamp(26px,8vw,40px)}
+  .duo-top,.mus,.legs,.rdw,.hp-out,.sets{grid-template-columns:1fr}.yt-scroll{max-height:340px}.two{grid-template-columns:1fr 1fr;gap:8px}.two a{aspect-ratio:3/4;min-height:0}.two .nm{font-size:clamp(26px,8vw,40px)}
   .disc{width:150px}.mus{justify-items:start}
   .ev{width:68vw}.arrows{display:none}
   .rn text{font-size:22px}.rn-d{r:8px}
@@ -348,6 +366,13 @@ footer img{height:22px;width:auto;opacity:.9}
       <div class="row"><button class="btn fill js-dl" type="button">↓ Descargar el track (WAV)</button><a class="btn" href="https://on.soundcloud.com/urOnp0b8pVWKQluJJK" target="_blank" rel="noopener">SoundCloud ↗</a><a class="btn" href="https://youtube.com/@gomezysaint" target="_blank" rel="noopener">YouTube ↗</a></div>
     </div>
   </div>
+  <div class="sub-h mono rv">Video sets</div>
+  <div class="sets rv">
+    <div class="yt-lite" id="set-yt"><div><img id="set-thumb" src="https://i.ytimg.com/vi/57sPjPkTy_g/maxresdefault.jpg" alt="" loading="lazy"><button class="play" type="button" id="set-play" data-id="57sPjPkTy_g" aria-label="Reproducir set"><i></i></button></div></div>
+    <div class="yt-list"><div class="yt-scroll"><button class="yt-item on" type="button" data-id="57sPjPkTy_g"><img src="https://i.ytimg.com/vi/57sPjPkTy_g/mqdefault.jpg" alt="" loading="lazy"><span><strong>Music Place × Good Friend's</strong><em>Nacho Scoppa & Pam Mac Allister</em></span></button><button class="yt-item" type="button" data-id="I5pTqQrWXQA"><img src="https://i.ytimg.com/vi/I5pTqQrWXQA/mqdefault.jpg" alt="" loading="lazy"><span><strong>Music Place × Vidaloca</strong><em>Olympo Sky Bar</em></span></button><button class="yt-item" type="button" data-id="pOskg_AFBIE"><img src="https://i.ytimg.com/vi/pOskg_AFBIE/mqdefault.jpg" alt="" loading="lazy"><span><strong>International Date</strong><em>Buenos Aires</em></span></button><button class="yt-item" type="button" data-id="_O1M7To4en0"><img src="https://i.ytimg.com/vi/_O1M7To4en0/mqdefault.jpg" alt="" loading="lazy"><span><strong>Good Friend's · Sunset</strong><em>Set sunset</em></span></button><button class="yt-item" type="button" data-id="hm31lkG7-KE"><img src="https://i.ytimg.com/vi/hm31lkG7-KE/mqdefault.jpg" alt="" loading="lazy"><span><strong>Good Friend's · Sunset II</strong><em>Set sunset</em></span></button><button class="yt-item" type="button" data-id="5KVGn4_zECU"><img src="https://i.ytimg.com/vi/5KVGn4_zECU/mqdefault.jpg" alt="" loading="lazy"><span><strong>DSY · Gonnet</strong><em>La Plata</em></span></button><button class="yt-item" type="button" data-id="BAA5GQGSQak"><img src="https://i.ytimg.com/vi/BAA5GQGSQak/mqdefault.jpg" alt="" loading="lazy"><span><strong>DSY · Gonnet II</strong><em>La Plata</em></span></button></div></div>
+  </div>
+  <div class="sub-h mono rv">Más música · SoundCloud</div>
+  <div class="sc rv"><iframe title="Gomez &amp; Saint en SoundCloud" loading="lazy" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fgomez-saint&color=%23caa45a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false"></iframe></div>
 </section>
 
 <div class="dl" role="dialog" aria-label="Descargar el track"><div class="dl-box"><button class="dl-x" type="button" aria-label="Cerrar">✕</button>
@@ -384,7 +409,7 @@ footer img{height:22px;width:auto;opacity:.9}
     <form><input type="password" placeholder="CLAVE" autocomplete="off" aria-label="Clave"><button class="btn fill" type="submit">Ver</button></form>
     <div class="err" role="alert"></div>
     <div class="hp-out" hidden></div>
-    <script type="application/json" id="hp-data">{"s":"9s2DsM4ehuJ6df+s4cUVNg==","i":"X5RdE9R1J2ZD4JT6","c":"m8ZZJ8fkmqfo9bQYSTgyBPZn1BIJWBnnTFymLxsi1ik9TgbwHXkKIRGluIjJFCt2JKiM+VryEaSNvRoaKCcP9fV47h7C7+iETo/VMdnp/K+5rsVS40vt0DirBnOCUWZwaQ2VXf5hi5l6ZmWyD7fuTXH6/T41Z4FHf3Lwq27fIjwvW9C7wzne+5RnhgjXeHx3N5zVghfu1SAWUensIK2otNeAyzDUapysCETS/jRDV39x6jBiEWIN/eZfX9qzYmzG8ylMyGnCLVi19Pd/m8RhJrNcdUlupQUA9byLmwXkn3wzWKLmYdcoBcsmR4UnvfdaP+uaW4Eq0q9cmC77EJO5sOYbZTgpY/c1GzXzWlIZ0TVjta5Z2PU6W2ZtGH3J9NcMShYK6//RcZ7t5CpyJwKJGMcOGS24S0Zt1Deu0Mjpr1pvO7hn6MuL1pUlLn4nsAlZH2M2cXE7wBDQsbiSQ+o8uujOgT7eWTP4l7/6kGuW+xbzgkUNM0WHuqczKgLx6zAaS5K5ghnJBVWNg6IsNvK17Ln4SAYLiCYIzRVSm8llIQh1LBLrrWTu21w3oepzupd0MGpDgWAAp7oWZP4R1krPqLtTGl59mxz/u7Lz/xGiODX0kCfG69/awuPa1zp+PL138abZRqj2X9FwAoE3yFIldW/dGZIhaBH535Btmf3Q+riMvAblBlyFggRTk9hCWO9Cv65dDTxKGgGOzfdjtSe5FZT0TizbAKcKlKWoDh+60A=="}</script>
+    <script type="application/json" id="hp-data">{"s":"kq2C3C6c4lYgGjUGCcJ+zg==","i":"3k8+SpIUQQ/ilF6G","c":"mXRmhHkdB1Sdp27riVIRl2k9Lv3Sfypi3+uK6Ts51Ue5LSYFhINq77irvvkj06yVUbo5Gu4qU/u7FwROk4Tss4cP+7KFRWnTNMCwkI4X6eNywEmawQ17Dc7exaG50dYGmTCo3CtAJ4CF70Rsm4dRaANs4oC0eSyn6OGy5ZRyf44yZ+HcEf4fX6oDccBoCRyg4aP0/dHVQzaB5FuJG1+MgVR5af2BdvGRYtbMqtJkdTJwsj3sDYizSzzIfJ+MFlh7ZTFltHqoFOxdlMCO9gmZPYfkqzzwFUsMdYxLl5f00ccTWFMGND9zWrnPS5dM5vlI9nG8c3EiyM+xsla7PJ05DKHLAkBgTDkU5OOSwtUKevuk0m2OSGj68LH0WJsbXE9yLoivHiQArCQYJe8Wohb6KEW1PqdIUV/vy8J4NBlegc2zeaHV167vVZwQ7ahGG8u54QREiva241Xr4e6Z72QPWF54iv5Lct3+fOLx0kjcWDzUonzbY3pJOCIDVNNFDGtSkew7uDG7LYJEYB6k0sND0VzCTzM0tKSqubcy5gjlxreQrGokpFSAoiMMHlPHGtDhEYytcBcKhUHFuS9jRHOWL5moAN/oGC5FJRojVJdepwXKIZb96bkqfBqcPCb2cqUA/8Y8NkYgcKrVt90a3xmad+JH0CEgjVdGkxvb+2F3swxBRSvj2KwVaVnYaTZfdt07jBHM8Imn2mHZH7QHM+ZE/Du+YQ1Ttl9s/mT8aFUyTA=="}</script>
   </div>
 </section>
 
@@ -439,6 +464,14 @@ au.addEventListener('play',function(){pb.classList.add('on');disc.classList.add(
 ['pause','ended'].forEach(function(n){au.addEventListener(n,function(){pb.classList.remove('on');disc.classList.remove('on')})});
 au.addEventListener('timeupdate',function(){var r=au.currentTime/(au.duration||1);bars.forEach(function(b,i){b.classList.toggle('on',i/bars.length<r)});tm.textContent=f(au.currentTime)+' / '+f(au.duration)});
 $('.bars').addEventListener('click',function(e){var r=this.getBoundingClientRect();if(au.duration)au.currentTime=(e.clientX-r.left)/r.width*au.duration});
+// youtube lite (carga el iframe al tocar)
+var setBox=$('#set-yt');
+function ytLoad(id){var f=document.createElement('iframe');
+ f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&playsinline=1'+(/^https?:/.test(location.protocol)?'&origin='+encodeURIComponent(location.origin):'');
+ f.referrerPolicy='strict-origin-when-cross-origin';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.title='Gomez & Saint';
+ var h=setBox.firstElementChild;h.innerHTML='';h.appendChild(f)}
+$('#set-play').addEventListener('click',function(e){ytLoad(e.currentTarget.dataset.id)});
+$$('.yt-item').forEach(function(b){b.addEventListener('click',function(){$$('.yt-item').forEach(function(x){x.classList.remove('on')});b.classList.add('on');ytLoad(b.dataset.id)})});
 // descarga del track (follow a las 3 cuentas)
 var dl=$('.dl'),steps=$$('.dl-st a'),go=$('.dl-go'),done={};
 try{done=JSON.parse(localStorage.getItem('gs_dl')||'{}')}catch(e){}
