@@ -75,9 +75,9 @@ h1 .am{color:var(--gold);font-weight:300;margin-right:.08em}
 .quote{font-family:var(--head);font-weight:300;font-size:clamp(22px,2.7vw,40px);line-height:1.2;letter-spacing:-.02em;text-transform:uppercase;border-left:2px solid var(--gold);padding-left:26px;margin-top:40px}
 .quote em{font-style:normal;color:var(--gold);font-weight:600}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:clamp(50px,7vw,100px)}
-.two a{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/3;min-height:300px;padding:clamp(18px,2.4vw,34px);text-decoration:none;overflow:hidden;border:1px solid var(--line);background:var(--card)}
-.two a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .5s;filter:brightness(.8)}
-.two a:hover img{transform:scale(1.05);filter:brightness(1)}
+.two a{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/3;min-height:300px;padding:clamp(18px,2.4vw,34px);text-decoration:none;overflow:hidden;border:1px solid var(--line);background:#e4dccb}
+.two a img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:80%;width:auto;aspect-ratio:1;max-width:none;-webkit-mask-image:linear-gradient(180deg,transparent,#000 9%),linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent,#000 9%),linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-composite:intersect;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .5s;filter:brightness(.78)}
+.two a:hover img{transform:translateX(-50%) scale(1.04);filter:brightness(1)}
 .two a::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,9,8,.92),rgba(10,9,8,.15) 55%,rgba(10,9,8,.35))}
 .two a>*:not(img){position:relative;z-index:1}
 .two .n{color:var(--gold)}
@@ -256,7 +256,7 @@ footer img{height:22px;width:auto;opacity:.9}
   .hero{grid-template-columns:1fr}.hero-r{order:-1;height:78svh}.hero-l{padding:46px 6vw 44px}
   .hero-r img{object-position:50% 70%}
   nav ul li:not(:last-child){display:none}
-  .duo-top,.mus,.legs,.rdw,.hp-out,.sets{grid-template-columns:1fr}.yt-scroll{max-height:340px}.two{grid-template-columns:1fr 1fr;gap:8px}.two a{aspect-ratio:3/4;min-height:0}.two .nm{font-size:clamp(26px,8vw,40px)}
+  .duo-top,.mus,.legs,.rdw,.hp-out,.sets{grid-template-columns:1fr}.yt-scroll{max-height:340px}.two{grid-template-columns:1fr 1fr;gap:8px}.two a{aspect-ratio:3/4;min-height:0}.two a img{height:auto;width:96%}.two .nm{font-size:clamp(26px,8vw,40px)}
   .disc{width:150px}.mus{justify-items:start}
   .ev{width:68vw}.arrows{display:none}
   .rn text{font-size:22px}.rn-d{r:8px}
@@ -353,6 +353,7 @@ footer img{height:22px;width:auto;opacity:.9}
     <script type="application/json" class="rg-data">["assets/g/01.jpg","assets/g/08.jpg","assets/g/15.jpg","assets/g/22.jpg","assets/g/29.jpg","assets/g/07.jpg","assets/g/14.jpg","assets/g/21.jpg","assets/g/28.jpg","assets/g/06.jpg","assets/g/13.jpg","assets/g/20.jpg","assets/g/27.jpg","assets/g/05.jpg","assets/g/12.jpg","assets/g/19.jpg","assets/g/26.jpg","assets/g/04.jpg","assets/g/11.jpg","assets/g/18.jpg","assets/g/25.jpg","assets/g/03.jpg","assets/g/10.jpg","assets/g/17.jpg","assets/g/24.jpg","assets/g/02.jpg","assets/g/09.jpg","assets/g/16.jpg","assets/g/23.jpg"]</script>
   </div>
 </div>
+<div class="section" style="padding-top:0;margin-top:calc(-1*clamp(40px,7vw,100px));text-align:left"><a class="btn fill" href="https://drive.google.com/drive/folders/1mhtd7JXSnLKpK-DPaKibuX5ZEV3MP-o3" target="_blank" rel="noopener">↓ Press pack · Drive</a></div>
 
 <section class="sec" id="musica">
   <div class="lab mono rv">05 — Música</div>
@@ -409,7 +410,7 @@ footer img{height:22px;width:auto;opacity:.9}
     <form><input type="password" placeholder="CLAVE" autocomplete="off" aria-label="Clave"><button class="btn fill" type="submit">Ver</button></form>
     <div class="err" role="alert"></div>
     <div class="hp-out" hidden></div>
-    <script type="application/json" id="hp-data">{"s":"kq2C3C6c4lYgGjUGCcJ+zg==","i":"3k8+SpIUQQ/ilF6G","c":"mXRmhHkdB1Sdp27riVIRl2k9Lv3Sfypi3+uK6Ts51Ue5LSYFhINq77irvvkj06yVUbo5Gu4qU/u7FwROk4Tss4cP+7KFRWnTNMCwkI4X6eNywEmawQ17Dc7exaG50dYGmTCo3CtAJ4CF70Rsm4dRaANs4oC0eSyn6OGy5ZRyf44yZ+HcEf4fX6oDccBoCRyg4aP0/dHVQzaB5FuJG1+MgVR5af2BdvGRYtbMqtJkdTJwsj3sDYizSzzIfJ+MFlh7ZTFltHqoFOxdlMCO9gmZPYfkqzzwFUsMdYxLl5f00ccTWFMGND9zWrnPS5dM5vlI9nG8c3EiyM+xsla7PJ05DKHLAkBgTDkU5OOSwtUKevuk0m2OSGj68LH0WJsbXE9yLoivHiQArCQYJe8Wohb6KEW1PqdIUV/vy8J4NBlegc2zeaHV167vVZwQ7ahGG8u54QREiva241Xr4e6Z72QPWF54iv5Lct3+fOLx0kjcWDzUonzbY3pJOCIDVNNFDGtSkew7uDG7LYJEYB6k0sND0VzCTzM0tKSqubcy5gjlxreQrGokpFSAoiMMHlPHGtDhEYytcBcKhUHFuS9jRHOWL5moAN/oGC5FJRojVJdepwXKIZb96bkqfBqcPCb2cqUA/8Y8NkYgcKrVt90a3xmad+JH0CEgjVdGkxvb+2F3swxBRSvj2KwVaVnYaTZfdt07jBHM8Imn2mHZH7QHM+ZE/Du+YQ1Ttl9s/mT8aFUyTA=="}</script>
+    <script type="application/json" id="hp-data">{"s":"A13aJ4LNTN58EiWJz52FPA==","i":"7OpN+Sry8ugZugcV","c":"mf5P91YU748KapC1pTAp0nYRPO3E1W4dvvUNvDSoobsPgg4HFhvkMvxUtcJc0YbTPTQUDQKG/4IlJI4Lto6EwS/qLKBEDjWWsX5G2Nn3JrYviPTBunITm6G7UdpDzj99qiqdsun60ZVd7gmB8OlFLZxTtqSJTHUU8dO7w89qCEVVgMq8R1JMXdlCmP4Nv5+N9WDrjGmsdKH83bprpCtHP4aKZ07xSMM/u7Qn9MMtoZUOQ4ZbZlbFFWsg64vQijtXWxiNkEH+gDBRMFkQwkil1j4huJ/latGk95CNTKbXIBMpy4h1t7chCVNCm5q5O8s85tRGNuc3CQF3zeLhO0/zvU+pV+PX8CT6Kro2sV34tgwBkYXIV6LtPb5PMBdVLreNxsZcHLCCelClSPrgjRAo624bXGUsW9pxxJDur/w1fr8a39x53nfjFszRC18FcHZzyHzn07YRaUBqFQB6mtDkFbwAjEXnUFntQY4KTJtRFqaTwuwlBJhofirGSxz60uMbMR9gDSX5ejtf8gchBSvKpGE+zNKvTM/t1VQi4bY/wP12YpYSYf6S0ZaU9rqfpMhS/VwX2boJz974V31Mdk0Gkh4IY2NzR8Wt1Q4muHyKcb1eH8rbjMZA8Pt8CVzOVe3DOabfk7h364Yno7T65irKFX2kQ05aQLXG01y3a4ulfAfkN7lHEaEKRyQNCA/g9WtlXvJpuU5DCGD9ICQ8Jlq8ID++t1ntC5JwK7lE61pebQ=="}</script>
   </div>
 </section>
 
@@ -417,7 +418,7 @@ footer img{height:22px;width:auto;opacity:.9}
   <div class="lab mono rv" style="justify-content:center">08 — Booking</div>
   <h2 class="h2 rv">Llevá a <em>Gomez &amp; Saint</em><br>a tu escenario</h2>
   <a class="mail rv" href="mailto:gomezysaint.music@gmail.com">gomezysaint.music@gmail.com</a>
-  <div class="soc rv"><a class="btn" href="https://www.instagram.com/gomezysaint.music" target="_blank" rel="noopener">Instagram dúo</a><a class="btn" href="https://www.instagram.com/luchoogoomez" target="_blank" rel="noopener">Gomez</a><a class="btn" href="https://www.instagram.com/agussaint" target="_blank" rel="noopener">Agus Saint</a><a class="btn" href="https://youtube.com/@gomezysaint" target="_blank" rel="noopener">YouTube</a><a class="btn" href="https://on.soundcloud.com/urOnp0b8pVWKQluJJK" target="_blank" rel="noopener">SoundCloud</a></div>
+  <div class="soc rv"><a class="btn fill" href="https://drive.google.com/drive/folders/1mhtd7JXSnLKpK-DPaKibuX5ZEV3MP-o3" target="_blank" rel="noopener">↓ Press pack</a><a class="btn" href="https://www.instagram.com/gomezysaint.music" target="_blank" rel="noopener">Instagram dúo</a><a class="btn" href="https://www.instagram.com/luchoogoomez" target="_blank" rel="noopener">Gomez</a><a class="btn" href="https://www.instagram.com/agussaint" target="_blank" rel="noopener">Agus Saint</a><a class="btn" href="https://youtube.com/@gomezysaint" target="_blank" rel="noopener">YouTube</a><a class="btn" href="https://on.soundcloud.com/urOnp0b8pVWKQluJJK" target="_blank" rel="noopener">SoundCloud</a></div>
 </div></section>
 
 <footer><img src="assets/logo_blanco.png" alt="Gomez &amp; Saint"><span>© 2026 Gomez &amp; Saint · La Plata, Argentina</span><a class="nvlop-credit" href="https://ecosistemanvlop.com" target="_blank" rel="noopener" aria-label="Powered by NVLOP"><span class="nv-by">Powered by</span><i class="nv-mark"></i><b class="nv-word">NVLOP</b></a></footer>
